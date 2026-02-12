@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CollabAI - Project Management Platform</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <!-- ================= NAVIGATION ================= -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <div class="logo">CollabAI</div>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#how">How It Works</a>
+        <a href="#features">Features</a>
+        <a href="#get-started">Get Started</a>
+      </nav>
+
+      <div class="nav-buttons">
+    <a href="/login" class="login-btn">Login</a>
+    <a href="/signup" class="signup-btn">Sign Up</a>
+      </div>
+
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="container hero-content">
+      <h1>
+        AI-Assisted Project Management <br />
+        <span>Built for Students & Teams</span>
+      </h1>
+      <p>
+        Plan smarter. Collaborate better. Track progress effortlessly.
+        Generate AI-powered project plans and manage your team with clarity.
+      </p>
+      <div class="hero-buttons">
+        <button class="primary-btn">Get Started Free</button>
+        <button class="secondary-btn">Learn More</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= HOW IT WORKS ================= -->
+  <section id="how" class="section">
+    <div class="container">
+      <h2>How It Works</h2>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>1. Create Project</h3>
+          <p>Add project details, timeline, and invite teammates.</p>
+        </div>
+
+        <div class="card">
+          <h3>2. Generate AI Plan</h3>
+          <p>AI creates structured tasks and assigns responsibilities.</p>
+        </div>
+
+        <div class="card">
+          <h3>3. Collaborate & Track</h3>
+          <p>Use Kanban boards and monitor real-time progress.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FEATURES ================= -->
+  <section id="features" class="section bg-light">
+    <div class="container">
+      <h2>Core Features</h2>
+
+      <div class="grid-3">
+        <div class="feature-card">
+          <h3>AI Project Planning</h3>
+          <p>Automatic task breakdown and roadmap creation.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Kanban Workflow</h3>
+          <p>Visual task movement and approval-based completion.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Team Collaboration</h3>
+          <p>File uploads, comments, and activity tracking.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Progress Analytics</h3>
+          <p>Track completion using approval-based metrics.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Secure Permissions</h3>
+          <p>Role-based task movement and verification flow.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>AI Final Report</h3>
+          <p>Generate structured project completion reports.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GET STARTED ================= -->
+  <section id="get-started" class="cta">
+    <div class="container">
+      <h2>Ready to Simplify Your Projects?</h2>
+      <p>Start planning smarter with AI-powered collaboration.</p>
+      <button class="cta-btn">Create Your First Project</button>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>CollabAI</h3>
+        <p>AI-powered project execution platform for students and professionals.</p>
+      </div>
+
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how">How It Works</a></li>
+          <li><a href="#get-started">Get Started</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>Email: support@collabai.com</li>
+          <li>GitHub</li>
+          <li>LinkedIn</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © <span id="year"></span> CollabAI. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

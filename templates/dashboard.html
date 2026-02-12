@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard | CollabAI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">CollabAI</div>
+
+        <nav>
+            <ul>
+                <li class="active">Dashboard</li>
+                <li onclick="goToProjects()">Projects</li>
+                <li onclick="goToTasks()">My Tasks</li>
+            </ul>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <button class="logout-btn" onclick="logout()">Logout</button>
+
+            <div class="user-info">
+                <img src="https://i.pravatar.cc/40" class="user-avatar">
+                <span id="sidebar-username">User Name</span>
+            </div>
+        </div>
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <h1 id="welcome-message">Welcome, User 👋</h1>
+
+        <!-- Stats Cards -->
+        <div class="stats-cards">
+            <div class="card">
+                <h3>Active Projects</h3>
+                <p id="active-projects">0</p>
+            </div>
+            <div class="card">
+                <h3>Pending Tasks</h3>
+                <p id="pending-tasks">0</p>
+            </div>
+            <div class="card">
+                <h3>Completed</h3>
+                <p id="completed-tasks">0</p>
+            </div>
+            <div class="card overdue">
+                <h3>Overdue</h3>
+                <p id="overdue-tasks">0</p>
+            </div>
+        </div>
+
+        <!-- Middle Section -->
+        <div class="middle-section">
+
+            <!-- Project Progress -->
+            <div class="progress-section">
+                <h2>Project Progress</h2>
+
+                <div id="projects-container">
+                    <!-- JS will inject progress bars -->
+                </div>
+            </div>
+
+            <!-- Upcoming Deadlines -->
+            <div class="deadline-section">
+                <h2>Upcoming Deadlines</h2>
+
+                <ul id="deadline-list">
+                    <!-- JS will inject deadlines -->
+                </ul>
+
+                <button class="view-all-btn" onclick="goToTasks()">View All Tasks</button>
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+</body>
+</html>
